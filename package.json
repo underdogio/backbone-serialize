@@ -1,0 +1,48 @@
+{
+  "name": "backbone-serialize",
+  "description": "Serialize Backbone models and collections into JSON representations",
+  "version": "1.0.0",
+  "homepage": "https://github.com/underdogio/backbone-serialize",
+  "author": {
+    "name": "Todd Wolfson",
+    "email": "todd@twolfson.com",
+    "url": "http://twolfson.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/underdogio/backbone-serialize.git"
+  },
+  "bugs": {
+    "url": "https://github.com/underdogio/backbone-serialize/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/underdogio/backbone-serialize/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/backbone-serialize",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "precheck": "twolfson-style precheck lib/ test/",
+    "lint": "twolfson-style lint lib/ test/",
+    "pretest": "twolfson-style install",
+    "test": "npm run precheck && mocha --reporter dot && npm run lint"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jscs": "~1.7.3",
+    "jshint": "~2.5.10",
+    "mocha": "~1.11.0",
+    "twolfson-style": "~1.6.0"
+  },
+  "keywords": [
+    "backbone",
+    "serialize",
+    "json",
+    "model",
+    "collection"
+  ]
+}
