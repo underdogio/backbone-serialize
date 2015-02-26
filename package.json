@@ -33,6 +33,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "backbone": "~1.1.2",
     "jscs": "~1.7.3",
     "jshint": "~2.5.10",
     "mocha": "~1.11.0",
