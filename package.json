@@ -26,18 +26,24 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
+    "build-browserify": "browserify lib/browser.js > dist/backbone-serialize.js",
+    "build-uglify": "uglifyjs dist/backbone-serialize.js > dist/backbone-serialize.min.js",
+    "build": "npm run build-browserify && npm run build-uglify",
+    "prepublish": "npm run build",
     "precheck": "twolfson-style precheck lib/ test/",
     "lint": "twolfson-style lint lib/ test/",
-    "pretest": "twolfson-style install",
-    "test": "npm run precheck && mocha --reporter dot && npm run lint"
+    "_pretest": "twolfson-style install",
+    "test": "mocha --reporter dot && npm run lint"
   },
   "dependencies": {},
   "devDependencies": {
     "backbone": "~1.1.2",
+    "browserify": "~9.0.3",
     "jscs": "~1.7.3",
     "jshint": "~2.5.10",
     "mocha": "~1.11.0",
-    "twolfson-style": "~1.6.0"
+    "twolfson-style": "~1.6.0",
+    "uglify-js": "~2.4.16"
   },
   "keywords": [
     "backbone",

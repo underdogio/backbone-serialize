@@ -8,6 +8,7 @@ This was written to prevent mutating model/collection state once inside of a tem
 [chaplin-serialize]: http://docs.chaplinjs.org/chaplin.model.html#serialize
 
 ## Getting Started
+### npm
 Install the module with: `npm install backbone-serialize`
 
 ```js
@@ -53,6 +54,28 @@ var collection = new Backbone.Collection([
   })
 ]);
 collection.serialize(); // [{word: 'hello'}, {word: 'world'}]
+```
+
+### bower
+Install the module with: `bower install backbone-serialize`
+
+```html
+<script src="bower_components/backbone-serialize/dist/backbone-serialize.min.js"></script>
+<script>
+  window.BackboneSerialize; // Use same as in `npm`
+</script>
+```
+
+### Vanilla
+Download the minified JS at:
+
+https://raw.githubusercontent.com/underdogio/backbone-serialize/master/dist/backbone-serialize.min.js
+
+```html
+<script src="backbone-serialize.min.js"></script>
+<script>
+  window.BackboneSerialize; // Use same as in `npm`
+</script>
 ```
 
 ## Documentation
